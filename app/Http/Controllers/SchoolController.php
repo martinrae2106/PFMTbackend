@@ -53,4 +53,10 @@ class SchoolController extends Controller
 
         return response('Deleted School', 200);
     }
+
+    public function getByRegionId($id)
+    {
+        return School::where('region_id', $id)->get();
+    }
+
 }
